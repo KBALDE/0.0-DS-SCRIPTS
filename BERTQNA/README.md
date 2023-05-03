@@ -5,7 +5,7 @@ pip install datasets evaluate transformers[sentencepiece]
 pip install accelerate
 ```
 
-And then you need to prepare your dataset. And that you may choose to work sample first. Or at least prepare your dataset and store it to disk.
+And then you need to prepare your dataset. And that you may choose to work on a sample first. Or at least prepare your dataset and store it to disk.
 
 ```python
 import datasets
