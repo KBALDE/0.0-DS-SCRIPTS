@@ -2,7 +2,7 @@
 
 python NeuralNetwork.py     --target_type="BIN" --num_epochs=2 --fine_tune=False \
                              --target_col_name="TARGET" \
-                             --file_path="./data/application_train.csv" \
+                             --file_path="../TAB_DATA/application_train.csv" \
                              --model_filename="model.pkl"\
                              --input_dim=29 \
                              --input_layer_units=40 \
