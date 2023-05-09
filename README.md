@@ -1,19 +1,30 @@
 # Data Science Scripts
 
-Ready made script to be executed on top of almost cleaned data
+Data Science Scripts "DS-SCRIPTS" are ready made script to quickly train and test an ML Use Case.
 
-For example for TAB_REGRESSIONS, after cloning the repo
+## How to use DS SCRIPT?
 
-Choose the model directory containing scripts
+1- Start by cloning the repo.
+
+2- Choose the ML algorithm you want to implement
+
+3- Stay above the repo directory and create some env variables
+
+
+For example for TAB_REGRESSIONS,
 
 ```sh
 EXEC_ROOT="0.0-DS-SCRIPTS/TAB_REGRESSIONS"
+```
+
+And Run the script
+
+```sh
 
 # run for training
  $EXEC_ROOT/Regression.sh
 
-
+ # run for inference
+ $EXEC_ROOT/Inference.sh
 ```
-
-And for inference
 
