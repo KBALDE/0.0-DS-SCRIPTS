@@ -21,6 +21,7 @@ parser.add_argument("--learning_rate", type=float, help="learning_rate")
 parser.add_argument("--checkpoint_path", type=str, help="checkpoint_path")
 parser.add_argument("--num_epochs", type=int, help="num_epochs")
 parser.add_argument("--fine_tune", type=bool, help="fine_tune")
+parser.add_argument("--test_filename", type=str, help="test_filename")
 
 args = parser.parse_args()
 
@@ -38,6 +39,7 @@ model_filename=args.model_filename
 checkpoint_path=args.checkpoint_path
 num_epochs=args.num_epochs
 fine_tune=args.fine_tune
+test_filename=args.test_filename
 
 
 import tensorflow as tf
@@ -456,7 +458,8 @@ def main():
                                                 y_train, 
                                                 target_col_name)
     ## save the test_set for inference
-    np.save("test_dict.npy", test_dict)
+    #np.save("test_dict.npy", test_dict)
+    np.save(test_filename, test_dict)
     
     # instantiate the model
     nn=NeuralNetwork(target_type=target_type,

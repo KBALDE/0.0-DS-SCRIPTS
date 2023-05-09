@@ -17,7 +17,7 @@ parser.add_argument("--target_col_name", type=str, help="target_col_name")
 parser.add_argument("--file_path", type=str, help="file_path")
 parser.add_argument("--model_filename", type=str, help="model_filename")
 parser.add_argument("--target_type", type=str, help="target_type")
-
+parser.add_argument("--test_filename", type=str, help="test_filename")
 
 args = parser.parse_args()
 
@@ -25,6 +25,7 @@ target_col_name=args.target_col_name
 file_path=args.file_path
 model_filename=args.model_filename
 target_type=args.target_type
+test_filename=args.test_filename
 
 
 ###
@@ -379,7 +380,8 @@ def main():
                                                     y_train, 
                                                     target_col_name)
     # save the test_set for inference
-    np.save("test_dict.npy", test_dict)
+    #np.save("test_dict.npy", test_dict)
+    np.save(test_filename, test_dict)
     
     
     # train
