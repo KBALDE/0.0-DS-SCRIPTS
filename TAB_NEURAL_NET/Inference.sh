@@ -5,7 +5,7 @@ TEST_FILE="./0.0-DS-SCRIPTS/TAB_DATA/nn_test_dict.npy"
 
 SCRIPT_ROOT="./0.0-DS-SCRIPTS/TAB_NEURAL_NET"
 
-python Inference.py   --target_type="BIN" --target_col_name="TARGET" \
+python $SCRIPT_ROOT/Inference.py   --target_type="BIN" --target_col_name="TARGET" \
                        --test_file=$TEST_FILE \
                        --input_dim=29 \
                        --input_layer_units=40 \
